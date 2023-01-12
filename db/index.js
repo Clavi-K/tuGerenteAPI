@@ -2,7 +2,7 @@ const { Sequelize } = require('sequelize');
 const fs = require('fs');
 const path = require('path');
 
-const realURL = `postgres://lclxfjdl:SoR_2DTlHK9TYnsVGh6msoHfiKQylwRa@mahmud.db.elephantsql.com/lclxfjdl`
+const realURL = `${process.env.DBURL}`
 
 const sequelize = new Sequelize(realURL, {
   logging: false, // set to console.log to see the raw SQL queries
